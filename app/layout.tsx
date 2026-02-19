@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Google_Sans } from "next/font/google";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
-import NavbarWidget from "@/components/widgets/Navbar";
+import Navbar from "@/components/widgets/Navbar";
 
 const googleSans = Google_Sans({
   subsets: ["latin"],
@@ -21,14 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${googleSans.className} relative antialiased`}
+        className={`${googleSans.className} relative antialiased bg-[#F0ECE1]`}
       >
-        <TooltipProvider>
-          <NavbarWidget />
-          <main className="">
-            {children}
-          </main>
-        </TooltipProvider>
+        <Navbar />
+        <main className="pt-16">
+          {children}
+        </main>
       </body>
     </html>
   );

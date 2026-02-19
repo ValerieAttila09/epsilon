@@ -1,63 +1,25 @@
-# Shattuck Labs Landing Page Blueprint
+# Blueprint Aplikasi Kanji
 
-## Overview
+## Ikhtisar
 
-This document outlines the plan for creating a responsive landing page for Shattuck Labs, based on a provided design image. The goal is to create a visually accurate and modern Next.js application.
+Aplikasi ini adalah situs web e-commerce modern yang dibuat dengan Next.js, menampilkan berbagai produk. Aplikasi ini memiliki navbar interaktif dengan menu dropdown beranimasi dan akan menampilkan berbagai bagian konten di halaman utama.
 
-## Implemented Features
+## Fitur & Desain yang Diimplementasikan
 
-This section will be updated as new components are built.
+*   **Framework**: Next.js dengan App Router
+*   **Styling**: Tailwind CSS
+*   **Animasi**: GSAP
+*   **Fitur Utama**:
+    *   **Navbar Interaktif**:
+        *   Navbar tetap di bagian atas dengan logo, tautan navigasi, dan ikon pengguna.
+        *   Efek hover pada tautan navigasi menampilkan submenu yang relevan.
+        *   Animasi GSAP yang halus untuk membuka/menutup dan mengubah ukuran wadah submenu.
+        *   Animasi fade-in dan slide-up untuk konten submenu saat muncul.
+        *   Animasi yang kuat yang menangani interaksi cepat tanpa bug.
+    *   **Keamanan Tipe**: Kode dasar diketik sepenuhnya menggunakan TypeScript, dengan semua antarmuka utama didefinisikan dalam `types/interfaces.ts`.
+    *   **Bagian Hero**: Bagian hero yang menarik secara visual dengan gambar latar belakang, hamparan teks, dan ajakan bertindak.
+    *   **Bagian Berita & Acara**: Bagian untuk menampilkan berita dan acara terbaru, masing-masing dengan data dari sumber terpisah.
 
-## Current Plan: Rebuild Landing Page
+## Rencana Saat Ini: Selesai
 
-The user was not satisfied with the initial version. This plan details the steps to rebuild the application to closely match the provided reference image.
-
-1.  **Project Cleanup:** Remove all previously created components, constants, and assets to start fresh.
-2.  **Navbar:**
-    *   Create a sticky navbar with a black, slightly transparent background.
-    *   Display the "SHATTUCK" logo on the left.
-    *   Include a "Contact" button on the right.
-3.  **Hero Section:**
-    *   Full-screen section with a black background.
-    *   Display the main headline: "Advancing the Standard of Care in Inflammatory Diseases Through Innovation".
-    *   Include the descriptive text below the headline.
-    *   Add a "Our Pipeline" button.
-4.  **DR3 Section ("Establishing DR3..."):**
-    *   White background section.
-    *   Left side: An image/placeholder for the "DR3 Image" graph.
-    *   Right side:
-        *   Headline: "Establishing DR3 as a Foundational Target in IBD and Beyond".
-        *   Descriptive text.
-        *   "Our Science" button.
-5.  **Pipeline Section:**
-    *   Display the title "Our Pipeline".
-    *   Include descriptive text.
-    *   List the "Leads": SL-325, SL-401, KADMON.
-    *   Add an "Our Pipeline" button.
-6.  **Join Us & Our Team Section:**
-    *   Title: "Join Us".
-    *   Button: "Explore Careers".
-    *   Subtitle: "Our Team" / "Meet the Innovators Guiding the Mission".
-    *   A simple list of team member names.
-7.  **Locations Section:**
-    *   Title: "Locations".
-    *   Text describing Durham, NC and Austin, TX offices.
-    *   Button: "Contact Us".
-8.  **News Section:**
-    *   Title: "News".
-    *   Create a list of news articles, each with a date, title, and a "Read More" link.
-9.  **Events Section:**
-    *   Title: "Events".
-    *   Create a list of events, each with a date, title, and a "Learn More" link.
-    *   Add a "View All Events" button at the bottom.
-10. **Footer:**
-    *   Black background.
-    *   "SHATTUCK LABS" title and tagline.
-    *   "Contact" section with a "Contact Us" button.
-    *   "Links" section with navigation links.
-    *   Copyright and legal information at the bottom.
-11. **Styling and Finalization:**
-    *   Use Tailwind CSS for styling, ensuring class names are clean and consistent.
-    *   Ensure responsiveness across different screen sizes.
-    *   Add animations and placeholder images as seen in the reference.
-    *   All content will be centralized in `lib/constants/index.ts`.
+Struktur data telah disederhanakan sesuai permintaan, dan semua komponen utama telah dibuat dan diintegrasikan ke dalam halaman utama.
