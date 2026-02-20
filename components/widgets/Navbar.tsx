@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { Search, ShoppingBag, User } from 'lucide-react';
 import { IMenuData, MenuKey } from '@/types/interfaces';
 import { menuData } from '@/lib/constants';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<MenuKey | null>(null);
@@ -63,7 +64,7 @@ const Navbar: React.FC = () => {
         height: 0,
         autoAlpha: 0,
         duration: 0.4,
-        ease: 'power3.inOut',
+        ease: 'power2.out',
       });
     }
   }, [activeMenu]);
@@ -71,7 +72,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       onMouseLeave={handleMouseLeave}
-      className="fixed top-0 left-0 w-full z-50 bg-[#4D4538] text-white"
+      className="fixed top-0 inset-x-0 w-full z-50 bg-neutral-950/50 backdrop-blur-sm border-b border-neutral-800 text-white"
     >
       <div className="container mx-auto px-6 py-2 flex justify-between items-center">
         <div className="flex items-center gap-20">
@@ -98,20 +99,20 @@ const Navbar: React.FC = () => {
       <div
         ref={menuWrapperRef}
         onMouseEnter={() => activeMenu && handleMouseEnter(activeMenu)}
-        className="absolute top-full left-0 w-full bg-[#4D4538] shadow-lg overflow-hidden h-0 invisible"
+        className="absolute top-full left-0 w-full bg-neutral-950/50 backdrop-blur-sm border-b border-neutral-800 shadow-lg overflow-hidden h-0 invisible"
       >
         <div className="w-full ms-43 py-4">
-          <div ref={menuContentRef} className="container mx-auto px-6 grid grid-cols-5 gap-8">
+          <div ref={menuContentRef} className="container mx-auto px-6 grid grid-cols-5 gap-8 pb-6">
             {activeMenu &&
               menuData[activeMenu].map((section, index) => (
-                <div key={index}>
-                  <h3 className="font-bold text-lg mb-4">{section.title}</h3>
+                <div key={index} className='space-y-4'>
+                  <h3 className="font-normal text-md mb-4 text-neutral-400">{section.title}</h3>
                   <ul>
                     {section.links.map((link, linkIndex) => (
                       <li key={linkIndex} className="mb-2">
-                        <a href="#" className="hover:text-gray-300 transition-colors duration-300">
+                        <Link href="#" className="text-sm font-thin hover:text-gray-300 transition-colors duration-300">
                           {link}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
