@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       onMouseLeave={handleMouseLeave}
-      className="fixed top-0 inset-x-0 w-full z-50 bg-neutral-950/50 backdrop-blur-sm border-b border-neutral-800 text-white"
+      className="fixed top-0 inset-x-0 w-full z-50 text-white bg-neutral-950/50"
     >
       <div className="container mx-auto px-6 py-2 flex justify-between items-center">
         <div className="flex items-center gap-20">
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
       <div
         ref={menuWrapperRef}
         onMouseEnter={() => activeMenu && handleMouseEnter(activeMenu)}
-        className="absolute top-full left-0 w-full bg-neutral-950/50 backdrop-blur-sm border-b border-neutral-800 shadow-lg overflow-hidden h-0 invisible"
+        className="absolute top-full left-0 w-full bg-neutral-950/50 border-b border-neutral-700 shadow-lg overflow-hidden h-0 invisible"
       >
         <div className="w-full ms-43 py-4">
           <div ref={menuContentRef} className="container mx-auto px-6 grid grid-cols-5 gap-8 pb-6">
