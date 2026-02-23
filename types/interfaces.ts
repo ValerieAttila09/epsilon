@@ -20,6 +20,27 @@ export interface IHero {
 	image: { src: string; alt: string; };
 }
 
+export interface IProduct {
+  id: number;
+  name: string;
+  category: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  rating: number;
+  reviews: number;
+  price: number;
+  discount?: number;
+  isNew?: boolean;
+  onSale?: boolean;
+}
+
+export interface IBrand {
+    name: string;
+    logo: string;
+}
+
 export interface IDR3 {
 	title: string;
 	content: string;
