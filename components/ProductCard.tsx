@@ -9,7 +9,7 @@ const ProductCard = ({ product }: { product: IProduct }) => {
       stars.push(
         <svg
           key={i}
-          className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
+          className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -21,46 +21,46 @@ const ProductCard = ({ product }: { product: IProduct }) => {
   };
 
   return (
-    <div className="bg-neutral-800 text-white rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white text-gray-800 rounded-xl shadow-sm overflow-hidden group transition-all duration-300 hover:shadow-lg">
       <div className="relative">
         <Image
           src={product.image.src}
           alt={product.image.alt}
           width={400}
           height={400}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         {product.isNew && (
-          <div className="absolute top-2 left-2 bg-yellow-400 text-neutral-900 text-xs font-bold px-2 py-1 rounded">
+          <div className="absolute top-3 left-3 bg-blue-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
             NEW
           </div>
         )}
-        {product.onSale && (
-            <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
-                SALE
-            </div>
+        {product.onSale && product.discount && (
+          <div className="absolute top-3 right-3 bg-red-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+            {product.discount}% OFF
+          </div>
         )}
       </div>
       <div className="p-4">
-        <h3 className="text-sm text-neutral-400">{product.category}</h3>
-        <p className="text-lg font-semibold mt-1">{product.name}</p>
+        <h3 className="text-xs text-gray-500 uppercase tracking-wider">{product.category}</h3>
+        <p className="text-base font-semibold mt-1 truncate">{product.name}</p>
         <div className="flex items-center mt-2">
           <div className="flex">{renderStars()}</div>
-          <span className="text-neutral-400 text-sm ml-2">{product.reviews} reviews</span>
+          <span className="text-gray-500 text-xs ml-2">({product.reviews})</span>
         </div>
-        <div className="flex items-center justify-between mt-4">
-            {product.onSale ? (
-                <div className="flex items-center">
-                    <p className="text-xl font-bold text-red-500">
-                        ${(product.price - (product.price * (product.discount ?? 0)) / 100).toFixed(2)}
-                    </p>
-                    <p className="text-sm text-neutral-400 line-through ml-2">
-                        ${product.price.toFixed(2)}
-                    </p>
-                </div>
-            ) : (
-          <p className="text-xl font-bold">${product.price.toFixed(2)}</p>
-            )}
+        <div className="flex items-baseline justify-between mt-4">
+          {product.onSale ? (
+            <div className="flex items-baseline">
+              <p className="text-lg font-bold text-red-500">
+                ${(product.price - (product.price * (product.discount ?? 0)) / 100).toFixed(2)}
+              </p>
+              <p className="text-sm text-gray-400 line-through ml-2">
+                ${product.price.toFixed(2)}
+              </p>
+            </div>
+          ) : (
+            <p className="text-lg font-bold">${product.price.toFixed(2)}</p>
+          )}
         </div>
       </div>
     </div>

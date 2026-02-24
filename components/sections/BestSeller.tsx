@@ -4,11 +4,11 @@ import ProductCard from '../ProductCard';
 
 const BestSeller = () => {
   return (
-    <section className="py-12 bg-neutral-900">
+    <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-            <div className="text-left mb-10">
-                <h2 className="text-3xl font-bold text-white">Best Sellers</h2>
-                <p className="text-neutral-400">Our most popular products.</p>
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-800">Best Sellers</h2>
+                <p className="text-gray-600 mt-2">Our most popular products.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {bestSellers.map((product) => (

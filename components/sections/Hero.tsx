@@ -9,21 +9,9 @@ const Hero: React.FC = () => {
 
   return (
     <section className="min-h-screen w-full relative">
-      <ColorBends
-        colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
-        rotation={0}
-        speed={0.2}
-        scale={1}
-        frequency={1}
-        warpStrength={1}
-        mouseInfluence={1}
-        parallax={0.5}
-        noise={0.1}
-        transparent
-        autoRotate={0}
-        className=''
-      />
-      <div className="absolute inset-x-0 h-1/4 bottom-0 bg-linear-to-t from-black to-transparent" />
+      <video width="1080" height="1080" autoPlay loop muted preload="none" className='absolute inset-0 w-full h-full object-cover'>
+        <source src={"https://image.uniqlo.com/UQ/CMS/video/jp/2026/HOME/GL_Aseets/PJ/CPJ/Mainlaunch/PC_MEN.mp4"} type="video/mp4" />
+      </video>
       <div className="absolute inset-0 w-full h-full z-10 flex flex-col justify-center items-start gap-5 p-8">
         <div className="max-w-3xl space-y-4">
           <h1 className="text-white font-bold text-6xl tracking-widest text-shadow-sm">WE HAVE EVERYTHING YOU WANT</h1>

@@ -1,160 +1,172 @@
-import { IMenuData, IHero, IProduct, IBrand } from '@/types/interfaces';
+import nikeIcon from '../../assets/icons/nike.svg'
+import adidasIcon from '../../assets/icons/adidas.svg'
+import pumaIcon from '../../assets/icons/puma.svg'
+import reebokIcon from '../../assets/icons/reebok.svg'
+import levisIcon from '../../assets/icons/levis.svg'
+import zaraIcon from '../../assets/icons/zara.svg'
+import hAndMIcon from '../../assets/icons/h&m.svg'
+import gucciIcon from '../../assets/icons/gucci.svg'
+import balenciagaIcon from '../../assets/icons/balenciaga.svg'
+import calvinKleinIcon from '../../assets/icons/calvin-klein.svg'
+import converseIcon from '../../assets/icons/converse.svg'
+import zimmermannIcon from '../../assets/icons/zimmermann.svg'
+import { IBestChoice, IBestSeller, IBigSale, IBrand, IFooter, IHero, INavbar, INewArrival, IMenuData } from "@/types/interfaces";
 
-export const heroData: IHero = {
-    title: "FIND YOUR FLOW",
-    subtitle: "Step into greatness. Our latest collection is engineered to elevate your every move. Discover the perfect pair to match your ambition.",
-    button: {
-        href: "#",
-        label: "Shop Now"
-    },
-    image: {
-        src: "https://placehold.co/1920x1080/4D4538/FFFFFF/png?text=KANJI",
-        alt: "A person tying their shoelaces"
-    }
-}
+export const navbarData: INavbar = {
+  logo: {
+    src: "assets/icons/Logo Alternative.svg",
+    alt: "Fashio.",
+  },
+  navLinks: [
+    { label: "Home", href: "/" },
+    { label: "Men", href: "/men" },
+    { label: "Women", href: "/women" },
+    { label: "Kids", href: "/kids" },
+  ],
+  searchPlaceholder: "Search...",
+  userAccount: {
+    label: "My Account",
+    icon: "https://placehold.co/24x24/C0C0C0/000000/png?text=User",
+  },
+  shoppingCart: {
+    label: "My Cart",
+    icon: "https://placehold.co/24x24/C0C0C0/000000/png?text=Cart",
+  },
+};
 
 export const menuData: IMenuData = {
-  "New": [
-    {
-      title: "New & Trending",
-      links: ["New Arrivals", "New Offer", "Best Sellers", "Latest Drops", "New in Air Max", "Shop Latest Sale Styles"],
-    },
+  Men: [
+    { title: 'Clothing', links: ['T-Shirts', 'Jeans', 'Shirts', 'Shorts'] },
+    { title: 'Shoes', links: ['Sneakers', 'Boots', 'Sandals'] },
+    { title: 'Accessories', links: ['Hats', 'Belts', 'Sunglasses'] },
   ],
-  "Men": [
-    {
-      title: "New & Trending",
-      links: ["New Arrivals", "New Offer", "Best Sellers", "Latest Drops", "New in Air Max"],
-    },
-    {
-      title: "Shoes",
-      links: ["Basketball", "Lifestyle", "Jordan", "Retro Running", "Running", "Training & Gym", "Sandals & Slides", "Shoes $100 & Under"],
-    },
-    {
-      title: "Clothing",
-      links: ["Hoodies & Sweatshirts", "Jordan", "Jackets & Vests", "Tracksuits", "24/7 Collection", "Pants", "Shorts", "Tops & T-Shirts"],
-    },
+  Women: [
+    { title: 'Clothing', links: ['Dresses', 'Tops', 'Skirts', 'Pants'] },
+    { title: 'Shoes', links: ['Heels', 'Flats', 'Boots'] },
+    { title: 'Accessories', links: ['Handbags', 'Jewelry', 'Scarves'] },
   ],
-  "Women": [
-    {
-      title: "New & Trending",
-      links: ["New Arrivals", "Best Sellers", "Latest Drops"],
-    },
-    {
-      title: "Shoes",
-      links: ["Lifestyle", "Running", "Training & Gym", "Sandals & Slides"],
-    },
-    {
-      title: "Clothing",
-      links: ["Hoodies & Sweatshirts", "Jackets & Vests", "Pants", "Shorts", "Tops & T-Shirts", "Sports Bras"],
-    },
-  ],
-  "Kids": [
-    {
-      title: "Featured",
-      links: ["New Arrivals", "Newest Sneakers", "Easy On & Off"],
-    },
-    {
-      title: "Boys",
-      links: ["Shoes", "Clothing", "Accessories"],
-    },
-    {
-      title: "Girls",
-      links: ["Shoes", "Clothing", "Accessories"],
-    },
-  ],
-  "Sports": [
-    {
-      title: "Accessories",
-      links: ["Bags & Backpacks", "Hats & Headwear", "Socks", "Sunglasses", "Belts"],
-    },
-    {
-      title: "Shop By Sport",
-      links: ["Baseball", "Basketball", "Cycling", "Football", "Golf", "Hiking", "Outdoor", "Running", "Soccer", "Tennis", "Workout & Gym", "Yoga"],
-    },
-    {
-      title: "Shop By Color",
-      links: ["Elemental Pink", "University Red", "Electric Blue", "Mink Brown", "Black And Sail"],
-    },
+  Kids: [
+    { title: 'Boys', links: ['T-Shirts', 'Shorts', 'Sneakers'] },
+    { title: 'Girls', links: ['Dresses', 'Tops', 'Sandals'] },
   ],
 };
 
-export const bigSales: IProduct[] = [
-  {
-    id: 1,
-    name: 'Classic Crewneck T-Shirt',
-    category: 'T-Shirts',
-    image: { src: 'https://placehold.co/400x400/F5F5F5/000000/png?text=Classic+Crewneck', alt: 'Classic Crewneck T-Shirt' },
-    rating: 4.5,
-    reviews: 120,
-    price: 25.00,
-    discount: 10,
-    onSale: true,
+export const heroData: IHero = {
+  title: "FASHIO.",
+  subtitle: "Your Style, Your Story",
+  description:
+    "Discover the latest trends and express your unique style with our curated collection of clothing and accessories. At Fashio, we believe that fashion is more than just what you wear—it's a way to tell your story. Whether you're looking for everyday essentials or statement pieces for a special occasion, we have something for everyone.",
+  ctaButton: {
+    label: "Shop Now",
+    href: "/products",
   },
-  {
-    id: 2,
-    name: 'Slim-Fit Chino Pants',
-    category: 'Pants',
-    image: { src: 'https://placehold.co/400x400/E5E5E5/000000/png?text=Slim-Fit+Chinos', alt: 'Slim-Fit Chino Pants' },
-    rating: 4.2,
-    reviews: 95,
-    price: 45.00,
-    discount: 15,
-    onSale: true,
+  video: {
+    src: "assets/videos/UQ_CMS_video_jp_2026_HOME_GL_Aseets_PJ_CPJ_Mainlaunch_SP_MEN.mp4",
+    type: "video/mp4",
   },
-  {
-    id: 9,
-    name: 'Bomber Jacket',
-    category: 'Jackets',
-    image: { src: 'https://placehold.co/400x400/D0D0D0/000000/png?text=Bomber+Jacket', alt: 'Bomber Jacket' },
-    rating: 4.6,
-    reviews: 150,
-    price: 85.00,
-    discount: 20,
-    onSale: true,
-  },
-  {
-    id: 10,
-    name: 'Graphic Hoodie',
-    category: 'Hoodies',
-    image: { src: 'https://placehold.co/400x400/C0C0C0/000000/png?text=Graphic+Hoodie', alt: 'Graphic Hoodie' },
-    rating: 4.4,
-    reviews: 130,
-    price: 60.00,
-    discount: 10,
-    onSale: true,
-  },
-];
+};
 
-export const bestSellers: IProduct[] = [
+export const newArrivalsData: INewArrival[] = [
     {
-        id: 3,
-        name: 'V-Neck Sweater',
-        category: 'Sweaters',
-        image: { src: 'https://placehold.co/400x400/D5D5D5/000000/png?text=V-Neck+Sweater', alt: 'V-Neck Sweater' },
+      id: 1,
+      name: 'Oversized Tee',
+      category: 'T-Shirts',
+      image: { src: 'https://placehold.co/400x400/000000/FFFFFF/png?text=Oversized+Tee', alt: 'Oversized Tee' },
+      rating: 4.5,
+      reviews: 150,
+      price: 25.00,
+      onSale: false,
+    },
+    {
+      id: 2,
+      name: 'Distressed Jeans',
+      category: 'Jeans',
+      image: { src: 'https://placehold.co/400x400/1E90FF/FFFFFF/png?text=Distressed+Jeans', alt: 'Distressed Jeans' },
+      rating: 4.7,
+      reviews: 200,
+      price: 75.00,
+      onSale: false,
+    },
+    {
+      id: 3,
+      name: 'Linen Shirt',
+      category: 'Shirts',
+      image: { src: 'https://placehold.co/400x400/FFFFFF/000000/png?text=Linen+Shirt', alt: 'Linen Shirt' },
+      rating: 4.6,
+      reviews: 180,
+      price: 45.00,
+      onSale: true,
+      discount: 10,
+    },
+    {
+      id: 4,
+      name: 'Cargo Shorts',
+      category: 'Shorts',
+      image: { src: 'https://placehold.co/400x400/32CD32/FFFFFF/png?text=Cargo+Shorts', alt: 'Cargo Shorts' },
+      rating: 4.4,
+      reviews: 120,
+      price: 40.00,
+      onSale: false,
+    },
+  ];
+
+  export const bigSales: IBigSale[] = [
+    {
+      id: 1,
+      name: 'Summer Dress',
+      category: 'Dresses',
+      image: { src: 'https://placehold.co/400x400/FF69B4/FFFFFF/png?text=Summer+Dress', alt: 'Summer Dress' },
+      rating: 4.8,
+      reviews: 300,
+      price: 50.00,
+      discount: 50,
+      onSale: true,
+    },
+    {
+      id: 2,
+      name: 'Leather Jacket',
+      category: 'Jackets',
+      image: { src: 'https://placehold.co/400x400/8B4513/FFFFFF/png?text=Leather+Jacket', alt: 'Leather Jacket' },
+      rating: 4.9,
+      reviews: 400,
+      price: 150.00,
+      discount: 40,
+      onSale: true,
+    },
+    {
+      id: 3,
+      name: 'Graphic Hoodie',
+      category: 'Hoodies',
+      image: { src: 'https://placehold.co/400x400/C0C0C0/000000/png?text=Graphic+Hoodie', alt: 'Graphic Hoodie' },
+      rating: 4.4,
+      reviews: 130,
+      price: 60.00,
+      discount: 10,
+      onSale: true,
+    },
+  ];
+
+  export const bestSellers: IBestSeller[] = [
+    {
+        id: 1,
+        name: 'Classic White Tee',
+        category: 'T-Shirts',
+        image: { src: 'https://placehold.co/400x400/FFFFFF/000000/png?text=Classic+White+Tee', alt: 'Classic White Tee' },
+        rating: 4.9,
+        reviews: 500,
+        price: 20.00,
+    },
+    {
+        id: 2,
+        name: 'Slim Fit Chinos',
+        category: 'Pants',
+        image: { src: 'https://placehold.co/400x400/D2B48C/000000/png?text=Slim+Fit+Chinos', alt: 'Slim Fit Chinos' },
         rating: 4.8,
-        reviews: 210,
+        reviews: 450,
         price: 55.00,
     },
     {
-        id: 4,
-        name: 'Denim Jacket',
-        category: 'Jackets',
-        image: { src: 'https://placehold.co/400x400/C5C5C5/000000/png?text=Denim+Jacket', alt: 'Denim Jacket' },
-        rating: 4.7,
-        reviews: 180,
-        price: 75.00,
-    },
-    {
-        id: 11,
-        name: 'Pleated Midi Skirt',
-        category: 'Skirts',
-        image: { src: 'https://placehold.co/400x400/B0B0B0/000000/png?text=Midi+Skirt', alt: 'Pleated Midi Skirt' },
-        rating: 4.9,
-        reviews: 250,
-        price: 65.00,
-    },
-    {
-        id: 12,
+        id: 3,
         name: 'Wool Peacoat',
         category: 'Coats',
         image: { src: 'https://placehold.co/400x400/A0A0A0/000000/png?text=Wool+Peacoat', alt: 'Wool Peacoat' },
@@ -164,97 +176,91 @@ export const bestSellers: IProduct[] = [
     },
 ];
 
-export const bestChoices: IProduct[] = [
-    {
-        id: 5,
-        name: 'Leather Biker Jacket',
-        category: 'Jackets',
-        image: { src: 'https://placehold.co/400x400/B5B5B5/000000/png?text=Biker+Jacket', alt: 'Leather Biker Jacket' },
-        rating: 4.9,
-        reviews: 320,
-        price: 150.00,
-    },
-    {
-        id: 6,
-        name: 'Cashmere Scarf',
-        category: 'Accessories',
-        image: { src: 'https://placehold.co/400x400/A5A5A5/000000/png?text=Cashmere+Scarf', alt: 'Cashmere Scarf' },
-        rating: 4.8,
-        reviews: 150,
-        price: 65.00,
-    },
-    {
-        id: 13,
-        name: 'Silk Blouse',
-        category: 'Blouses',
-        image: { src: 'https://placehold.co/400x400/909090/000000/png?text=Silk+Blouse', alt: 'Silk Blouse' },
-        rating: 4.9,
-        reviews: 180,
-        price: 70.00,
-    },
-    {
-        id: 14,
-        name: 'Trench Coat',
-        category: 'Coats',
-        image: { src: 'https://placehold.co/400x400/808080/000000/png?text=Trench+Coat', alt: 'Trench Coat' },
-        rating: 4.7,
-        reviews: 200,
-        price: 140.00,
-    },
+export const bestChoices: IBestChoice[] = [
+  {
+    id: 1,
+    name: 'Urban Backpack',
+    category: 'Accessories',
+    image: { src: 'https://placehold.co/400x400/808080/FFFFFF/png?text=Urban+Backpack', alt: 'Urban Backpack' },
+    rating: 4.7,
+    reviews: 250,
+    price: 65.00,
+  },
+  {
+    id: 2,
+    name: 'Aviator Sunglasses',
+    category: 'Accessories',
+    image: { src: 'https://placehold.co/400x400/000000/FFFFFF/png?text=Aviator+Sunglasses', alt: 'Aviator Sunglasses' },
+    rating: 4.9,
+    reviews: 350,
+    price: 35.00,
+  },
+  {
+    id: 3,
+    name: 'Leather Belt',
+    category: 'Accessories',
+    image: { src: 'https://placehold.co/400x400/8B4513/FFFFFF/png?text=Leather+Belt', alt: 'Leather Belt' },
+    rating: 4.8,
+    reviews: 300,
+    price: 30.00,
+  },
 ];
 
-export const newArrivals: IProduct[] = [
+export const footerData: IFooter = {
+  logo: {
+    src: "assets/images/kanji-lable-footer.v2.svg",
+    alt: "Fashio.",
+  },
+  companyLinks: [
+    { label: "About Us", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Press", href: "/press" },
+  ],
+  helpLinks: [
+    { label: "FAQ", href: "/faq" },
+    { label: "Shipping", href: "/shipping" },
+    { label: "Returns", href: "/returns" },
+  ],
+  legalLinks: [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+  ],
+  socialMedia: [
     {
-        id: 7,
-        name: 'Linen Button-Down Shirt',
-        category: 'Shirts',
-        image: { src: 'https://placehold.co/400x400/959595/000000/png?text=Linen+Shirt', alt: 'Linen Button-Down Shirt' },
-        rating: 4.6,
-        reviews: 80,
-        price: 38.00,
-        isNew: true,
+      name: "Facebook",
+      icon: "https://placehold.co/24x24/3B5998/FFFFFF/png?text=F",
+      href: "https://facebook.com",
     },
     {
-        id: 8,
-        name: 'High-Waisted Skinny Jeans',
-        category: 'Jeans',
-        image: { src: 'https://placehold.co/400x400/858585/000000/png?text=Skinny+Jeans', alt: 'High-Waisted Skinny Jeans' },
-        rating: 4.4,
-        reviews: 110,
-        price: 60.00,
-        isNew: true,
+      name: "Twitter",
+      icon: "https://placehold.co/24x24/1DA1F2/FFFFFF/png?text=T",
+      href: "https://twitter.com",
     },
     {
-        id: 15,
-        name: 'Cropped Cardigan',
-        category: 'Cardigans',
-        image: { src: 'https://placehold.co/400x400/707070/000000/png?text=Cropped+Cardigan', alt: 'Cropped Cardigan' },
-        rating: 4.5,
-        reviews: 90,
-        price: 50.00,
-        isNew: true,
+      name: "Instagram",
+      icon: "https://placehold.co/24x24/E4405F/FFFFFF/png?text=I",
+      href: "https://instagram.com",
     },
-    {
-        id: 16,
-        name: 'Wide-Leg Trousers',
-        category: 'Trousers',
-        image: { src: 'https://placehold.co/400x400/606060/000000/png?text=Wide-Leg+Trousers', alt: 'Wide-Leg Trousers' },
-        rating: 4.7,
-        reviews: 140,
-        price: 55.00,
-        isNew: true,
-    },
-];
+  ],
+  newsletter: {
+    title: "Subscribe to our newsletter",
+    description: "Get the latest updates on new arrivals and special offers.",
+    placeholder: "Enter your email",
+    buttonLabel: "Subscribe",
+  },
+};
 
 export const brands: IBrand[] = [
-  { name: 'Nike', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Nike' },
-  { name: 'Adidas', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Adidas' },
-  { name: 'Puma', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Puma' },
-  { name: 'Reebok', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Reebok' },
-  { name: 'Levi\'s', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Levi\'s' },
-  { name: 'Zara', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Zara' },
-  { name: 'H&M', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=H&M' },
-  { name: 'Gucci', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Gucci' },
-  { name: 'Prada', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Prada' },
-  { name: 'Versace', logo: 'https://placehold.co/150x50/cccccc/000000/png?text=Versace' },
+  { name: 'Nike', logo: nikeIcon },
+  { name: 'Adidas', logo: adidasIcon },
+  { name: 'Puma', logo: pumaIcon },
+  { name: 'Reebok', logo: reebokIcon },
+  { name: 'Levi\'s', logo: levisIcon },
+  { name: 'Zara', logo: zaraIcon },
+  { name: 'H&M', logo: hAndMIcon },
+  { name: 'Gucci', logo: gucciIcon },
+  { name: 'Balenciaga', logo: balenciagaIcon },
+  { name: 'Calvin Klein', logo: calvinKleinIcon },
+  { name: 'Converse', logo: converseIcon },
+  { name: 'Zimmermann', logo: zimmermannIcon },
 ];

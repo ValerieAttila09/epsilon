@@ -1,3 +1,13 @@
+export interface ISearchCategory {
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+export interface ISearchSuggestion {
+  title: string;
+  count: number;
+}
+
 export interface IMenuSection {
   title: string;
   links: string[];
@@ -6,19 +16,6 @@ export interface IMenuSection {
 export type IMenuData = Record<string, IMenuSection[]>;
 
 export type MenuKey = keyof IMenuData;
-
-export interface INavbar {
-	logo: { src: string; alt: string; };
-	links: { href: string; label: string; }[];
-	contact: { href: string; label: string; };
-}
-
-export interface IHero {
-	title: string;
-	subtitle: string;
-	button: { href: string; label: string; };
-	image: { src: string; alt: string; };
-}
 
 export interface IProduct {
   id: number;
@@ -31,9 +28,45 @@ export interface IProduct {
   rating: number;
   reviews: number;
   price: number;
+  onSale?: boolean;
   discount?: number;
   isNew?: boolean;
-  onSale?: boolean;
+}
+
+export type INewArrival = IProduct;
+export type IBigSale = IProduct;
+export type IBestSeller = IProduct;
+export type IBestChoice = IProduct;
+
+export interface INavbar {
+  logo: {
+    src: string;
+    alt: string;
+  };
+  navLinks: { label: string; href: string; }[];
+  searchPlaceholder: string;
+  userAccount: {
+    label: string;
+    icon: string;
+  };
+  shoppingCart: {
+    label: string;
+    icon: string;
+  };
+}
+
+export interface IHero {
+  title: string;
+  subtitle: string;
+  description: string;
+  ctaButton: {
+    label: string;
+    href: string;
+  };
+  video: {
+    src: string;
+    type: string;
+  };
 }
 
 export interface IBrand {
@@ -41,66 +74,23 @@ export interface IBrand {
     logo: string;
 }
 
-export interface IDR3 {
-	title: string;
-	content: string;
-	button: { href: string; label: string; };
-	image: { src: string; alt: string; };
-}
-
-export interface IPipeline {
-	title: string;
-	content: string;
-	button: { href: string; label: string; };
-	chart: { src: string; alt: string; };
-}
-
-export interface IJoinOurTeam {
-	joinUs: {
-		title: string;
-		content: string;
-		button: { href: string; label: string; };
-	};
-	ourTeam: {
-		title: string;
-		content: string;
-		button: { href: string; label: string; };
-		images: { src: string; alt: string; }[];
-	};
-	locations: {
-		title: string;
-		content: string;
-		button: { href: string; label: string; };
-	};
-}
-
-export interface INews {
-	title: string;
-	items: {
-		date: string;
-		title: string;
-		button: { href: string; label: string; };
-	}[];
-}
-
-export interface IEvents {
-	title: string;
-	items: {
-		date: string;
-		title: string;
-		button: { href: string; label: string; };
-	}[];
-}
-
 export interface IFooter {
-	logo: { src: string; alt: string; };
-	contact: { href: string; label: string; };
-	links: {
-		[key: string]: {
-			href: string;
-			label: string;
-		}[];
-	};
-	social: { href: string; src: string; alt: string; }[];
-	legal: { text: string; };
+  logo: {
+    src: string;
+    alt: string;
+  };
+  companyLinks: { label: string; href: string; }[];
+  helpLinks: { label:string; href: string; }[];
+  legalLinks: { label: string; href: string; }[];
+  socialMedia: {
+    name: string;
+    icon: string;
+    href: string;
+  }[];
+  newsletter: {
+    title: string;
+    description: string;
+    placeholder: string;
+    buttonLabel: string;
+  };
 }
