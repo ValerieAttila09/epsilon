@@ -107,7 +107,7 @@ const SearchWidget: React.FC<SearchWidgetProps> = ({ onClose }) => {
 					<div className="w-2/3 p-5 overflow-y-auto">
 						<ul className="space-y-3">
 							{searchTrending.map((item, index) => (
-								<li key={index} ref={el => listItemsRef.current[index] = el}>
+								<li key={index} ref={el => { listItemsRef.current[index] = el; }}>
 									<Link href="#" className="flex justify-between items-center text-gray-600 hover:text-gray-900 group text-sm">
 										<span>{item.name}</span>
 										<span className="text-xs text-gray-400 group-hover:text-gray-600">{item.count}</span>
