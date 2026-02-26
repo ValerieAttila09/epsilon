@@ -40,7 +40,6 @@ const SearchWidget: React.FC<SearchWidgetProps> = ({ onClose }) => {
 		const body = document.body;
 		body.style.overflow = 'hidden';
 
-		// Set initial states for animation
 		gsap.set(contentRef.current, { y: -30, opacity: 0 });
 		gsap.set(backdropRef.current, { opacity: 0 });
 		gsap.set(listItemsRef.current, { opacity: 0 });
@@ -70,29 +69,30 @@ const SearchWidget: React.FC<SearchWidgetProps> = ({ onClose }) => {
 	};
 
 	return (
-		<div ref={widgetRef} className="fixed inset-0 z-[100] items-start justify-center pt-24" style={{ display: 'none' }} onClick={handleClose}>
+		<div ref={widgetRef} className="fixed inset-0 z-[100] items-start justify-center pt-16 md:pt-24" style={{ display: 'none' }} onClick={handleClose}>
 			<div ref={backdropRef} className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 			<div
 				ref={contentRef}
-				className="relative bg-white w-full max-w-4xl rounded-lg shadow-2xl overflow-hidden transform-gpu"
+				className="relative bg-white w-11/12 max-w-4xl rounded-lg shadow-2xl overflow-hidden transform-gpu"
 				onClick={(e) => e.stopPropagation()}
 			>
-				<div className="p-5 border-b border-gray-200">
+				<div className="p-4 md:p-5 border-b border-gray-200">
 					<div className="flex items-center">
 						<SearchIcon className="text-gray-400" size={20} />
 						<input
 							type="text"
-							placeholder="Search for products, brands, and more"
-							className="w-full ml-4 text-lg bg-transparent focus:outline-none text-gray-800 placeholder-gray-400"
+							placeholder="Search..."
+							className="w-full ml-2 text-base sm:ml-4 sm:text-lg bg-transparent focus:outline-none text-gray-800 placeholder-gray-400"
 							autoFocus
 						/>
-						<button onClick={handleClose} className="text-gray-400 hover:text-gray-600 ml-4">
+						<button onClick={handleClose} className="text-gray-400 hover:text-gray-600 ml-2 sm:ml-4">
 							<X size={24} />
 						</button>
 					</div>
 				</div>
-				<div className="flex h-[50vh]">
-					<div className="w-1/3 border-r border-gray-200 p-5">
+				<div className="flex flex-col md:flex-row h-[60vh] md:h-[50vh]">
+					<div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-gray-200 p-4 md:p-5">
+                        <h3 className="text-sm font-semibold text-gray-500 mb-3">CATEGORIES</h3>
 						<ul className="space-y-1">
 							{searchCategories.map((category, index) => (
 								<li key={index}>
@@ -104,7 +104,8 @@ const SearchWidget: React.FC<SearchWidgetProps> = ({ onClose }) => {
 							))}
 						</ul>
 					</div>
-					<div className="w-2/3 p-5 overflow-y-auto">
+					<div className="w-full md:w-2/3 p-4 md:p-5 overflow-y-auto">
+                        <h3 className="text-sm font-semibold text-gray-500 mb-4">TRENDING</h3>
 						<ul className="space-y-3">
 							{searchTrending.map((item, index) => (
 								<li key={index} ref={el => { listItemsRef.current[index] = el; }}>

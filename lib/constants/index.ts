@@ -26,6 +26,8 @@ import SlimFitChinosImage from "../../assets/images/slim-fit-chinos.png";
 import SummerDressImage from "../../assets/images/summer-dress-kanji.png";
 import UrbanBackpackImage from "../../assets/images/urban-backpack-kanji.png";
 import WoolPeacotImage from "../../assets/images/wool-peacot-kanji.png";
+import ChanelFallImage2024 from "../../assets/images/chanel-fall-winter-2024-kanji.png";
+import ChanelFallImage2025 from "../../assets/images/chanel-fall-winter-2025-kanji.png";
 
 import { IBestChoice, IBestSeller, IBigSale, IBrand, IFooter, IHero, INavbar, INewArrival, IMenuData } from "@/types/interfaces";
 
@@ -84,113 +86,133 @@ export const heroData: IHero = {
 };
 
 export const newArrivalsData: INewArrival[] = [
-    {
-      id: 1,
-      name: 'Oversized Tee',
-      category: 'T-Shirts',
-      image: { src: OversizedTShirtImage, alt: 'Oversized Tee' },
-      rating: 4.5,
-      reviews: 150,
-      price: 25.00,
-      onSale: false,
-    },
-    {
-      id: 2,
-      name: 'Distressed Jeans',
-      category: 'Jeans',
-      image: { src: DistressedJeansImage, alt: 'Distressed Jeans' },
-      rating: 4.7,
-      reviews: 200,
-      price: 75.00,
-      onSale: false,
-    },
-    {
-      id: 3,
-      name: 'Linen Shirt',
-      category: 'Shirts',
-      image: { src: LinenShirtImage, alt: 'Linen Shirt' },
-      rating: 4.6,
-      reviews: 180,
-      price: 45.00,
-      onSale: true,
-      discount: 10,
-    },
-    {
-      id: 4,
-      name: 'Cargo Shorts',
-      category: 'Shorts',
-      image: { src: CargoShortImage, alt: 'Cargo Shorts' },
-      rating: 4.4,
-      reviews: 120,
-      price: 40.00,
-      onSale: false,
-    },
-  ];
+  {
+    id: 1,
+    name: 'Oversized Tee',
+    category: 'T-Shirts',
+    image: { src: OversizedTShirtImage, alt: 'Oversized Tee' },
+    rating: 4.5,
+    reviews: 150,
+    price: 25.00,
+    onSale: false,
+  },
+  {
+    id: 2,
+    name: 'Distressed Jeans',
+    category: 'Jeans',
+    image: { src: DistressedJeansImage, alt: 'Distressed Jeans' },
+    rating: 4.7,
+    reviews: 200,
+    price: 75.00,
+    onSale: false,
+  },
+  {
+    id: 3,
+    name: 'Linen Shirt',
+    category: 'Shirts',
+    image: { src: LinenShirtImage, alt: 'Linen Shirt' },
+    rating: 4.6,
+    reviews: 180,
+    price: 45.00,
+    onSale: true,
+    discount: 10,
+  },
+  {
+    id: 4,
+    name: 'Cargo Shorts',
+    category: 'Shorts',
+    image: { src: CargoShortImage, alt: 'Cargo Shorts' },
+    rating: 4.4,
+    reviews: 120,
+    price: 40.00,
+    onSale: false,
+  },
+];
 
-  export const bigSales: IBigSale[] = [
-    {
-      id: 1,
-      name: 'Summer Dress',
-      category: 'Dresses',
-      image: { src: SummerDressImage, alt: 'Summer Dress' },
-      rating: 4.8,
-      reviews: 300,
-      price: 50.00,
-      discount: 50,
-      onSale: true,
-    },
-    {
-      id: 2,
-      name: 'Leather Jacket',
-      category: 'Jackets',
-      image: { src: LeatherJacketImage, alt: 'Leather Jacket' },
-      rating: 4.9,
-      reviews: 400,
-      price: 150.00,
-      discount: 40,
-      onSale: true,
-    },
-    {
-      id: 3,
-      name: 'Graphic Hoodie',
-      category: 'Hoodies',
-      image: { src: GraphicHoodieImage, alt: 'Graphic Hoodie' },
-      rating: 4.4,
-      reviews: 130,
-      price: 60.00,
-      discount: 10,
-      onSale: true,
-    },
-  ];
+export const bigSales: IBigSale[] = [
+  {
+    id: 1,
+    name: 'Summer Dress',
+    category: 'Dresses',
+    image: { src: SummerDressImage, alt: 'Summer Dress' },
+    rating: 4.8,
+    reviews: 300,
+    price: 50.00,
+    discount: 50,
+    onSale: true,
+  },
+  {
+    id: 2,
+    name: 'Leather Jacket',
+    category: 'Jackets',
+    image: { src: LeatherJacketImage, alt: 'Leather Jacket' },
+    rating: 4.9,
+    reviews: 400,
+    price: 150.00,
+    discount: 40,
+    onSale: true,
+  },
+  {
+    id: 3,
+    name: 'Graphic Hoodie',
+    category: 'Hoodies',
+    image: { src: GraphicHoodieImage, alt: 'Graphic Hoodie' },
+    rating: 4.4,
+    reviews: 130,
+    price: 60.00,
+    discount: 10,
+    onSale: true,
+  },
+  {
+    id: 4,
+    name: 'Chanel Fall-Winter 2024/25',
+    category: 'Coats',
+    image: { src: ChanelFallImage2024, alt: 'Chanel Fall-Winter 2024/25' },
+    rating: 5.0,
+    reviews: 777,
+    price: 240.00,
+    discount: 25,
+    onSale: true,
+  }
+];
 
-  export const bestSellers: IBestSeller[] = [
-    {
-        id: 1,
-        name: 'Classic White Tee',
-        category: 'T-Shirts',
-        image: { src: ClassicWhiteTeeImage, alt: 'Classic White Tee' },
-        rating: 4.9,
-        reviews: 500,
-        price: 20.00,
-    },
-    {
-        id: 2,
-        name: 'Slim Fit Chinos',
-        category: 'Pants',
-        image: { src: SlimFitChinosImage, alt: 'Slim Fit Chinos' },
-        rating: 4.8,
-        reviews: 450,
-        price: 55.00,
-    },
-    {
-        id: 3,
-        name: 'Wool Peacoat',
-        category: 'Coats',
-        image: { src: WoolPeacotImage, alt: 'Wool Peacoat' },
-        rating: 4.8,
-        reviews: 220,
-        price: 120.00,
-    },
+export const bestSellers: IBestSeller[] = [
+  {
+    id: 1,
+    name: 'Classic White Tee',
+    category: 'T-Shirts',
+    image: { src: ClassicWhiteTeeImage, alt: 'Classic White Tee' },
+    rating: 4.9,
+    reviews: 500,
+    price: 20.00,
+  },
+  {
+    id: 2,
+    name: 'Slim Fit Chinos',
+    category: 'Pants',
+    image: { src: SlimFitChinosImage, alt: 'Slim Fit Chinos' },
+    rating: 4.8,
+    reviews: 450,
+    price: 55.00,
+  },
+  {
+    id: 3,
+    name: 'Wool Peacoat',
+    category: 'Coats',
+    image: { src: WoolPeacotImage, alt: 'Wool Peacoat' },
+    rating: 4.8,
+    reviews: 220,
+    price: 120.00,
+  },
+  {
+    id: 4,
+    name: 'Chanel Fall-Winter 2024/25',
+    category: 'Coats',
+    image: { src: ChanelFallImage2024, alt: 'Chanel Fall-Winter 2024/25' },
+    rating: 5.0,
+    reviews: 777,
+    price: 240.00,
+  }
 ];
 
 export const bestChoices: IBestChoice[] = [
@@ -221,6 +243,15 @@ export const bestChoices: IBestChoice[] = [
     reviews: 300,
     price: 30.00,
   },
+  {
+    id: 4,
+    name: 'Chanel Fall-Winter 25/26',
+    category: 'Coats',
+    image: { src: ChanelFallImage2025, alt: 'Chanel Fall-Winter 25/26' },
+    rating: 5.0,
+    reviews: 458,
+    price: 285.00,
+  }
 ];
 
 export const footerData: IFooter = {
